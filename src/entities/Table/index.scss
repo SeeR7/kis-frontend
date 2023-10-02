@@ -1,0 +1,95 @@
+.styled-table {
+    color: $textSecondary;
+    border-collapse: separate; /* Don't collapse */
+    border-spacing: 0;
+    overflow: auto;
+    border: 1px solid  $textSecondary;
+    border-bottom: none;
+    border-top: none;
+}
+
+.styled-table th, caption {
+    color: $textPrimary;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.styled-table th  {
+    background-color: $themeArea;
+    text-align: center;
+    user-select: none;
+}
+
+.styled-table th:hover  {
+    cursor: pointer;
+    background-color: $textSecondary
+}
+
+.styled-table tr:hover {
+    background: $themeSelected;
+    color: $textPrimary;
+}
+
+.styled-table td  {
+    text-align: center;
+    padding: 10px;
+    max-width: 250px;
+    word-wrap: break-word;
+    
+}
+
+.styled-table td, th {
+    border-bottom: 1px solid $textSecondary;
+  }
+
+  .table-wrapper {
+    max-width: fit-content;
+    overflow: auto;
+    border-top: 1px solid  $textSecondary;
+    margin-top: 10px;
+  }
+
+  .styled-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+ .styled-table th {
+    
+    width: fit-content;
+    max-width: 150px;
+  }
+
+  .styled-table a {
+    margin: 0;
+  }
+
+  .styled-table th.up {
+    background-image: url("../../shared/assets/table-arrow/up_arrow.png");
+  }
+  .styled-table th.down {
+    background-image: url("../../shared/assets/table-arrow//down_arrow.png");
+  }
+  .styled-table th.default {
+    background-image: url("../../shared/assets/table-arrow//default.png");
+  }
+  th.up,
+  th.default,
+  th.down {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right;
+    padding-right: 30px;
+  }
+
+
+  
+  .styled-table input {
+    width: fit-content!important;
+    size: inherit;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    
+  }

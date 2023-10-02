@@ -1,0 +1,48 @@
+.card {
+    background-color: $themeElement;
+    display: flex;
+    flex-direction: column;
+    min-width: 270px;
+    padding: 16px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: auto; 
+    max-height: 80vh;
+}
+
+.card p {
+    margin: 0px;
+    color:$textSecondary;
+}
+
+.card h2 {
+    margin: 0px;
+    color: $textPrimary;
+}
+
+.login_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card-content {
+    color: $textSecondary;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.card-content a {
+    margin-bottom: 5px;
+    max-width: fit-content;
+    margin-left: 40px;
+}
+
+.card-content a:hover {
+    color:$textPrimary;
+    text-decoration-line: underline;
+}

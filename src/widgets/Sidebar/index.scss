@@ -1,0 +1,18 @@
+.nav {
+    color: $textPrimary;
+    background-color: $themeElement;
+    width: 220px;
+    min-width: fit-content; 
+}
+
+.elems {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+

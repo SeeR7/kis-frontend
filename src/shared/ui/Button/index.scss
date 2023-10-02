@@ -1,0 +1,20 @@
+.button {
+    color: $textPrimary;
+    border: none;
+    background-color: $themeArea;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: $themeSelected;
+}
+
+.text {
+    color:$textPrimary;
+}

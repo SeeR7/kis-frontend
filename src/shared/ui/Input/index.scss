@@ -1,0 +1,30 @@
+.input {
+    color: $textPrimary;
+    margin-bottom: 16px;
+    border: none;
+    background-color:$themeArea;
+    border-radius:10px;
+    font-size:16px;
+    padding:10px;
+    cursor: auto;
+    text-align: left;
+}
+
+.input:hover {
+    background-color: $themeHover;
+}
+
+input::selection {
+    background: gray;
+}
+
+.input:focus {
+    outline: none;
+    background-color:$themeSelected;
+}
+
+input:-webkit-autofill {
+    background-color: $textSecondary !important;
+    background-image:none !important;
+    color: $textPrimary !important;
+  }
