@@ -1,7 +1,7 @@
 import Table from 'entities/Table';
-import SearchBar from 'entities/Table/SearchBar';
+import SearchBar from 'entities/SearchBar';
 import React, { useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useGetSostavQuery } from 'shared/api/foreignAPI';
 import Card from 'shared/ui/Card';
 

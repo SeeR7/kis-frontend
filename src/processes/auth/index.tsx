@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-
 import Routing from 'pages'
 import { useLogoutUserMutation } from 'widgets/LoginForm/api/authAPI'
 import { checkIsAuth, checkRole, logout } from 'widgets/LoginForm/api/features/authSlice'

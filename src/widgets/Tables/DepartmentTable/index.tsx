@@ -3,7 +3,7 @@ import { useGetDepartmentsQuery, useDeleteDepartmentMutation, useUpdateDepartmen
 import Dialog from 'entities/Dialog'
 import Card from 'shared/ui/Card'
 import Table from 'entities/Table'
-import SearchBar from 'entities/Table/SearchBar'
+import SearchBar from 'entities/SearchBar'
 import Button from 'shared/ui/Button'
 
 

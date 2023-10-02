@@ -1,4 +1,3 @@
-import React from 'react'
 
 
 const TableHead = ({ columns, defaultSort, setSort, sort,numerable }: any) => {

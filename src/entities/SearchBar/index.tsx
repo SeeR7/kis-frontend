@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import Input from 'shared/ui/Input'
 
 const SearchBar = ({ search, searchTable }: any) => {

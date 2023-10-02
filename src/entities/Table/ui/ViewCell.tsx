@@ -1,11 +1,9 @@
+import { Link } from 'react-router-dom';
 import Dialog from 'entities/Dialog';
 import IconButton from 'entities/IconButton';
-import React from 'react'
 import { ReactComponent as EditIcon } from 'shared/assets/edit.svg'
 import { ReactComponent as DeleteIcon } from 'shared/assets/delete.svg'
 import { getDeepValue } from '../lib/getDeepValue';
-import { Link } from 'react-router-dom';
-
 
 
 function isDate(sDate:any) {  

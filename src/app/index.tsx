@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import AuthProcess from 'processes/auth';
@@ -10,11 +10,11 @@ import './global.scss';
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Suspense fallback="Loading...">
             <AuthProcess />
         </Suspense>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }

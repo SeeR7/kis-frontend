@@ -1,4 +1,3 @@
-import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 
 import MonitorPage from './monitor'
@@ -10,15 +9,15 @@ import LoginPage from './login'
 import PrivateRotes from 'pages/routes/PrivateRotes'
 import PublicRotes from 'pages/routes/PublicRotes'
 
-import AgregatMenu from 'widgets/AgregatMenu'
-import DseMenu from 'widgets/DseMenu'
-import ProjectMenu from 'widgets/ProjectMenu'
+import AgregatMenu from 'widgets/Menus/AgregatMenu'
+import DseMenu from 'widgets/Menus/DseMenu'
+import ProjectMenu from 'widgets/Menus/ProjectMenu'
 
-import DepartmentTable from 'shared/ui/components/tables/DepartmentTable'
-import DseCard from 'shared/ui/components/tables/DseCard'
-import ProjectTable from 'shared/ui/components/tables/ProjectTable'
-import SpecTable from 'shared/ui/components/tables/SpecTable'
-import UserTable from 'shared/ui/components/tables/UserTable'
+import DseCard from 'widgets/Tables/DseCard'
+import ProjectCard from 'widgets/Tables/ProjectCard'
+import DepartmentTable from 'widgets/Tables/DepartmentTable'
+import SpecTable from 'widgets/Tables/SpecTable'
+import UserTable from 'widgets/Tables/UserTable'
 
 
 const Routing = ({...props}) => {
@@ -29,7 +28,7 @@ const Routing = ({...props}) => {
           <Route path='/tasks' element={<TasksPage />} />
           <Route path="/messenger" element={<MessengerPage/>} />
           <Route path='/tasks/project' element={<ProjectMenu />} />
-          <Route path='/tasks/project/:id' element={<ProjectTable />} />
+          <Route path='/tasks/project/:id' element={<ProjectCard />} />
           <Route path='/tasks/agregat/' element={<AgregatMenu/>} />
           <Route path='/tasks/agregat/:id' element={<SpecTable/>} />
           <Route path='/tasks/agregat/dse/' element={<DseMenu/>} />

@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
-import Button from 'shared/ui/Button'
-import Card from 'shared/ui/Card'
-import Modal from './Modal'
+import { useState } from 'react'
+import Modal from '../../shared/ui/Modal/Modal'
 
 
 const Dialog = ({ title, handleAction,states, columns, Child, icon, label }: any) => {

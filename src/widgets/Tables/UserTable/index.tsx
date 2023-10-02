@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useGetDepartmentsQuery } from 'shared/api/departmentAPI'
-import { useGetUsersQuery, useUpdateUserMutation, useDeleteUserMutation, useCreateUserMutation, userAPI } from 'shared/api/userAPI'
+import { useGetUsersQuery, useUpdateUserMutation, useDeleteUserMutation, useCreateUserMutation } from 'shared/api/userAPI'
 import Card from 'shared/ui/Card'
 import Table from 'entities/Table'
-import SearchBar from 'entities/Table/SearchBar'
+import SearchBar from 'entities/SearchBar'
 import Dialog from 'entities/Dialog'
 import Button from 'shared/ui/Button'
 
@@ -103,16 +103,6 @@ const UserTable: React.FC = () => {
       isActive: boolValue
     }
     await updateUser(payloadData)
-  }
-
-  function getDepId(obj:any, value:number) {
-    let returnValue = undefined
-    obj.map((item:any) => {
-      if (item.label == value){
-        returnValue = item.value
-      }
-    })
-    return returnValue
   }
 
   const addTest = async (data: any, setError: any, closeModal: any) => {

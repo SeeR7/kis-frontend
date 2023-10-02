@@ -4,7 +4,6 @@ import { replacer } from "../lib/replacer";
 import ViewCell from "./ViewCell";
 import EditCell from "./EditCell";
 import { setDeepValue } from "../lib/setDeepValue";
-import { type } from "@testing-library/user-event/dist/type";
 
 
 const TableBody = ({ numerable,search, columns, states, handleUpdate, handleDelete, data: tableData, sort }: any) => {
