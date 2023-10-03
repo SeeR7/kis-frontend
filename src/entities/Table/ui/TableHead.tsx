@@ -1,6 +1,6 @@
 
 
-const TableHead = ({ columns, defaultSort, setSort, sort,numerable }: any) => {
+const TableHead = ({ columns, defaultSort, setSort, sort,numerable, role, dep }: any) => {
     if (!defaultSort) {
         defaultSort = "";
     }
@@ -14,8 +14,20 @@ const TableHead = ({ columns, defaultSort, setSort, sort,numerable }: any) => {
         <thead>
             <tr>
                 {numerable && <th key={"#"} rowSpan={2}>№</th>}
-                {columns.map(({ label, accessor, sortable, colSpan, rowSpan, layer }: any) => {
-                    if (layer === 1 || !layer) {
+                {columns.map(({ label, accessor, sortable, colSpan, rowSpan, layer, roles, deps }: any) => {
+
+                    if (!roles){
+                        roles = ''
+                    }
+                    if (!deps){
+                        deps = ''
+                    }
+                    let check = true
+                    if ((accessor === 'full-action' || accessor === 'only-edit') && (roles || deps))
+                    {
+                        check = roles.includes(role) || deps.includes(dep) || role === 'Developer'
+                    }
+                    if ((layer === 1 || !layer) && check) {
                         const cl = sortable
                         ? sort.key === accessor && sort.order === "asc"
                             ? "up"

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Card } from 'shared';
 import { useGetProjectsQuery } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card';
 
-const ProjectMenu: React.FC = () => {
+
+export const ProjectMenu: React.FC = () => {
 
   const { data } = useGetProjectsQuery('')
 
@@ -16,4 +17,3 @@ const ProjectMenu: React.FC = () => {
   )
 }
 
-export default ProjectMenu

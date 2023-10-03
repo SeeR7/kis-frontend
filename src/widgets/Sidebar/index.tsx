@@ -1,6 +1,5 @@
-import Button from '../../shared/ui/Button'
+import { NavButton, Button } from 'shared'
 import {ReactComponent as LogoutIcon} from 'shared/assets/logout.svg'
-import NavButton from 'shared/ui/NavButton'
 
 const Sidebar = (props:any) => {
   return (

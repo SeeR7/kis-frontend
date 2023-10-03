@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useGetUsersQuery } from 'shared/api/userAPI';
-import Card from 'shared/ui/Card';
+import {Card} from 'shared';
 import DseTable from './DseTable';
 import TechnologyTable from './TechnologyTable';
 import { useGetDseCardQuery } from 'shared/api/foreignAPI';

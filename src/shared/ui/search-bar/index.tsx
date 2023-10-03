@@ -1,6 +1,6 @@
-import Input from 'shared/ui/Input'
+import { Input } from 'shared'
 
-const SearchBar = ({ search, searchTable }: any) => {
+export const SearchBar = ({ search, searchTable }: any) => {
 
     return (
         <div style={{marginTop:"10px"}}>
@@ -13,5 +13,3 @@ const SearchBar = ({ search, searchTable }: any) => {
         </div>
     )
 }
-
-export default SearchBar

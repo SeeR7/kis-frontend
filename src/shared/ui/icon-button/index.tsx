@@ -1,6 +1,6 @@
 
 
-const IconButton = (props:any) => {
+export const IconButton = (props:any) => {
   return (
     <div className='icon-button'>
         <button onClick={props.onClick}>
@@ -10,5 +10,3 @@ const IconButton = (props:any) => {
     </div>
   )
 }
-
-export default IconButton

@@ -1,10 +1,10 @@
 import { ReactComponent as SaveIcon } from 'shared/assets/done.svg'
 import { ReactComponent as CancelIcon } from 'shared/assets/cancel.svg'
-import Input from 'shared/ui/Input'
-import Select from 'shared/ui/Select'
-import IconButton from 'entities/IconButton'
+
 
 import { getDeepValue } from '../lib/getDeepValue'
+import { IconButton } from 'shared/ui/icon-button'
+import { Select, Input } from 'shared'
 
 const EditCell = ({ numerable, data, columns, count, setToggle, setState, deepState, state, states, handleUpdate }: any) => {
     return (

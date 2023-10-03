@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { apiSlice } from "shared/api/apiSlice";
-import authReducer from "widgets/LoginForm/api/features/authSlice";
+import authReducer from "shared/api/features/authSlice";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 
 

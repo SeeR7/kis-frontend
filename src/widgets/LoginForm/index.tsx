@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { useLoginUserMutation } from 'widgets/LoginForm/api/authAPI';
-import { setUser } from 'widgets/LoginForm/api/features/authSlice';
+import { useLoginUserMutation } from 'shared/api/authAPI';
+import { setUser } from 'shared/api/features/authSlice';
 import { useAppDispatch } from 'shared/lib/store';
-import Button from 'shared/ui/Button';
-import Input from 'shared/ui/Input';
-import Card from 'shared/ui/Card';
 import { ReactComponent as LoginIcon } from 'shared/assets/login.svg'
+import { Card, Input, Button } from 'shared';
 
 const LoginForm: React.FC = () => {
   const [login, setLogin] = useState('')

@@ -4,9 +4,11 @@ import { replacer } from "../lib/replacer";
 import ViewCell from "./ViewCell";
 import EditCell from "./EditCell";
 import { setDeepValue } from "../lib/setDeepValue";
+import { useAppSelector } from "shared/lib/store";
+import { checkRole, checkDep } from "shared/api/features/authSlice";
 
 
-const TableBody = ({ numerable,search, columns, states, handleUpdate, handleDelete, data: tableData, sort }: any) => {
+const TableBody = ({ numerable,search, columns, states, handleUpdate, handleDelete, data: tableData, sort, role, dep }: any) => {
     const [{ item, toggle }, setToggle] = useState({ item: 0, toggle: true })
     const [state, setState] = useState(states)
 
@@ -58,9 +60,9 @@ const TableBody = ({ numerable,search, columns, states, handleUpdate, handleDele
                     
                     toggle || (key !== item)
                         ?
-                        <ViewCell key={key} {...{ numerable, data, columns, count, setToggle, fullState, handleDelete }} />
+                        <ViewCell key={key} {...{ numerable, data, columns, count, setToggle, fullState, handleDelete, role, dep }} />
                         :
-                        <EditCell key={key} {...{ numerable, data, columns, count, setToggle, deepState, state, setState, states, handleUpdate }} />
+                        <EditCell key={key} {...{ numerable, data, columns, count, setToggle, deepState, state, setState, states, handleUpdate, role, dep }} />
                 );
             })}
         </tbody>

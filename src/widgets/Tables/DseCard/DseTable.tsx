@@ -1,10 +1,11 @@
-import Table from 'entities/Table'
+import { Table } from 'entities/Table';
+import { Card } from 'shared';
 import { useUpdateLocalDseMutation } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card'
 
 
 const DseTable = ({dse}:any) => {
     const [updateLocalDse] = useUpdateLocalDseMutation()
+
 
     const columns = [
         { layer: 1, rowSpan: 2, label: "Деталь", accessor: "_1c.dseCode", type: "text" },
@@ -25,7 +26,7 @@ const DseTable = ({dse}:any) => {
         { layer: 2, rowSpan: 1, label: "Фактически", accessor: "_1c.quantityProdDep", type: "text" },
 
         { layer: 1, rowSpan: 2, label: 'Материал', accessor: 'rusagr.material', type: 'text'},
-        { layer: 1, rowSpan: 2, label: 'Действие', accessor: 'only-edit'},
+        { layer: 1, rowSpan: 2, label: 'Действие', accessor: 'only-edit', roles: 'Engineer', deps: '5'},
     ];
 
     const tableDse = []

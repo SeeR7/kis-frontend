@@ -1,12 +1,16 @@
 @import "./styles/index.scss";
+
 @import "shared/ui/button";
 @import "shared/ui/input";
 @import "shared/ui/card";
-@import "widgets/header";
-@import "widgets/sidebar";
-@import "shared/ui/navbutton";
-@import "entities/iconbutton";
-
-@import "entities/table";
 @import "shared/ui/modal";
 @import "shared/ui/select";
+@import "shared/ui/navbutton";
+
+@import "entities/icon-button";
+@import "entities/table";
+
+@import "widgets/header";
+@import "widgets/sidebar";
+@import "widgets/loginform";
+

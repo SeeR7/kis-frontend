@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const NavButton = (props:any) => {
+export const NavButton = (props:any) => {
     return (
         <li className='nav-button'>
             <Link to={props.route}>
@@ -9,5 +9,3 @@ const NavButton = (props:any) => {
         </li>
     )
 }
-
-export default NavButton

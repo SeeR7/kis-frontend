@@ -1,11 +1,10 @@
+import { Dialog } from 'shared/ui/Dialog'
+import { SearchBar } from 'shared/ui/search-bar'
+import { Table } from 'entities/Table'
 import React, { useState } from 'react'
+import { Card, Button } from 'shared'
 import { useGetDepartmentsQuery } from 'shared/api/departmentAPI'
 import { useGetUsersQuery, useUpdateUserMutation, useDeleteUserMutation, useCreateUserMutation } from 'shared/api/userAPI'
-import Card from 'shared/ui/Card'
-import Table from 'entities/Table'
-import SearchBar from 'entities/SearchBar'
-import Dialog from 'entities/Dialog'
-import Button from 'shared/ui/Button'
 
 
 const UserTable: React.FC = () => {

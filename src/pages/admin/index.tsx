@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Card from 'shared/ui/Card'
+import { Card } from 'shared'
 
 const AdminPage: React.FC = () => {
   return (

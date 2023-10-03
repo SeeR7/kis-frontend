@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import AboutTable from './AboutTable';
 import AgregatTable from './AgregatTable';
 import { useGetProjectQuery, useGetProjectAgregatsQuery } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card';
+import {Card} from 'shared';
 
 const ProjectCard: React.FC = () => {
     let { id } = useParams();

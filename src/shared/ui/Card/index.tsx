@@ -1,6 +1,6 @@
 
 
-const Form = (props: any) => {
+export const Card = (props: any) => {
   return (
     <div className='card'>
       <h2>{props.header}</h2>
@@ -10,5 +10,3 @@ const Form = (props: any) => {
     </div>
   )
 }
-
-export default Form

@@ -1,6 +1,6 @@
 
 
-const Select = ( {onChange, children, data}:any) => {
+export const Select = ( {onChange, children, data}:any) => {
     return (
         <select className='select' defaultValue={children} onChange={onChange} >
             {data && data.map((item:any) => 
@@ -9,5 +9,3 @@ const Select = ( {onChange, children, data}:any) => {
         </select>
     )
 }
-
-export default Select

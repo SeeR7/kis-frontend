@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useGetDepartmentsQuery, useDeleteDepartmentMutation, useUpdateDepartmentMutation, useCreateDepartmentMutation } from 'shared/api/departmentAPI'
-import Dialog from 'entities/Dialog'
-import Card from 'shared/ui/Card'
-import Table from 'entities/Table'
-import SearchBar from 'entities/SearchBar'
-import Button from 'shared/ui/Button'
+import {Dialog} from 'shared/ui/Dialog'
+import {Card} from 'shared'
+import {Table} from 'entities/Table'
+import {SearchBar} from 'shared/ui/search-bar'
+import {Button} from 'shared/'
 
 
 const DepartmentTable: React.FC = () => {

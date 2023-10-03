@@ -1,27 +1,24 @@
-import IconButton from 'entities/IconButton';
-import Table from 'entities/Table';
 import { useState } from 'react'
 import { useUpdateLocalTechMutation } from 'shared/api/foreignAPI';
 import { useAppSelector } from 'shared/lib/store';
 import { IEmployee } from 'shared/types/IEmployee';
-import Card from 'shared/ui/Card';
-import { checkRole, checkFio, checkDep } from 'widgets/LoginForm/api/features/authSlice';
+import { checkRole, checkFio, checkDep } from 'shared/api/features/authSlice';
 import { ReactComponent as SaveIcon } from 'shared/assets/done.svg'
 import { ReactComponent as EditIcon } from 'shared/assets/edit.svg'
 import { ReactComponent as CancelIcon } from 'shared/assets/cancel.svg'
+import { IconButton } from 'shared/ui/icon-button';
+import { Table } from 'entities/Table';
+import { Card } from 'shared';
 
-const TechnologyTable = ({dse, userArray}:any) => {
+const TechnologyTable = ({ dse, userArray }: any) => {
 
-    const role = useAppSelector(checkRole)
     const fio = useAppSelector(checkFio)
+    const role = useAppSelector(checkRole)
     const dep = useAppSelector(checkDep)
     const [user, setUser] = useState(fio)
     const [{ depData, toggleDep }, setToggleDep] = useState({ depData: 0, toggleDep: true })
-    
+
     const [updateLocalTech] = useUpdateLocalTechMutation()
-
-
-    //const { data: dse, isLoading: isLoadingDse } = useGetDseCardQuery({ id: id })
 
     const [completionPercentageInput, setCompletionPercentageInput] = useState(0)
     const [techDateInput, setTechDateInput] = useState('')
@@ -29,7 +26,7 @@ const TechnologyTable = ({dse, userArray}:any) => {
 
     let counter = 0
 
-    
+
     let techDate: string | null
     const handleUpdateTech = async (depRouteId: any, dseId: any) => {
         if (techDateInput === "") {
@@ -53,33 +50,30 @@ const TechnologyTable = ({dse, userArray}:any) => {
 
     }
 
-    let planMechData: string | null
-    let planProdData: string | null
-
     const techColumns = [
-        {layer: 1, rowSpan: 2, label: <>Цех<br/>изготовитель</>, accessor: 'techRusagr.depProd'},
-        {layer: 1, rowSpan: 2, label: <>Цех<br/>потребитель</>, accessor: 'techRusagr.depCons'},
-        {layer: 1, colSpan: 3, label: "Технологический процесс", accessor: "none"},
-        {layer: 2, label: "ФИО", accessor: 'techLocal.name', type: 'text'},
-        {layer: 2, label: "%", accessor: 'techLocal.techCompletionPercentage', type: 'number'},
-        {layer: 2, label: "Дата", accessor: 'techLocal.techDate', type:'date'},
-        {layer: 1, rowSpan: 2, label: "Комментарий", accessor: "techLocal.description"},
-        {layer: 1, rowSpan: 2, label: 'Действие', accessor: 'only-edit'},
+        { layer: 1, rowSpan: 2, label: <>Цех<br />изготовитель</>, accessor: 'techRusagr.depProd' },
+        { layer: 1, rowSpan: 2, label: <>Цех<br />потребитель</>, accessor: 'techRusagr.depCons' },
+        { layer: 1, colSpan: 3, label: "Технологический процесс", accessor: "none" },
+        { layer: 2, label: "ФИО", accessor: 'techLocal.name', type: 'text' },
+        { layer: 2, label: "%", accessor: 'techLocal.techCompletionPercentage', type: 'number' },
+        { layer: 2, label: "Дата", accessor: 'techLocal.techDate', type: 'date' },
+        { layer: 1, rowSpan: 2, label: "Комментарий", accessor: "techLocal.description" },
+        { layer: 1, rowSpan: 2, label: 'Действие', accessor: 'only-edit' },
     ]
 
     const techStates = {
         id: 'techRusagr.id',
-        'techRusagr.id':0,
-        'techRusagr.name':'',
-        
+        'techRusagr.id': 0,
+        'techRusagr.name': '',
+
 
     }
 
 
-    const updateTestTech = async (data:any) => {
+    const updateTestTech = async (data: any) => {
         console.log(data)
     }
-    
+
     return (
         <div>
 
@@ -97,7 +91,7 @@ const TechnologyTable = ({dse, userArray}:any) => {
                                 <th rowSpan={2}>Цех<br />потребитель</th>
                                 <th colSpan={3}>Технологический процесс</th>
                                 <th rowSpan={2}>Комментарий</th>
-                                <th rowSpan={2}>Действие</th>
+                                {<th rowSpan={2}>Действие</th>}
                             </tr>
                             <tr>
                                 <th>ФИО</th>

@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import Modal from '../../shared/ui/Modal/Modal'
+import { Modal } from '../Modal'
 
 
-const Dialog = ({ title, handleAction,states, columns, Child, icon, label }: any) => {
+
+export const Dialog = ({ title, handleAction,states, columns, Child, icon, label }: any) => {
   const [modal, setModal] = useState(false)
   return (
     <div style={{ display: "inline-block", flexDirection:"row" }}>
@@ -11,5 +12,3 @@ const Dialog = ({ title, handleAction,states, columns, Child, icon, label }: any
     </div>
   )
 }
-
-export default Dialog

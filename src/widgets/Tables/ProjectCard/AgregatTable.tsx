@@ -1,5 +1,6 @@
-import Table from 'entities/Table'
-import Card from 'shared/ui/Card'
+import { Table } from "entities/Table"
+import { Card } from "shared"
+
 
 
 const AgregatTable = (props: any) => {

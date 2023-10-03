@@ -1,6 +1,6 @@
 
 
-const Input = ({...props}) => {
+export const Input = ({...props}) => {
   return (
     <input 
     value={props.value}
@@ -13,5 +13,3 @@ const Input = ({...props}) => {
     onChange={props.onChange}/>
   )
 }
-
-export default Input

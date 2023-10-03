@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Card } from 'shared';
 import { useGetAgregatsQuery } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card';
 
 
-const AgregatMenu: React.FC = () => {
+export const AgregatMenu: React.FC = () => {
 
   const { data } = useGetAgregatsQuery('')
 
@@ -17,4 +17,3 @@ const AgregatMenu: React.FC = () => {
   )
 }
 
-export default AgregatMenu

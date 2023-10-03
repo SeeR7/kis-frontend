@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Card } from 'shared';
 import { useGetDsesQuery } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card';
 
 
-const DseMenu: React.FC = () => {
+export const DseMenu: React.FC = () => {
   const { data } = useGetDsesQuery('')
 
   return (
@@ -16,4 +16,3 @@ const DseMenu: React.FC = () => {
   )
 }
 
-export default DseMenu

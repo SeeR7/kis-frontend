@@ -1,4 +1,4 @@
-import { apiSlice } from "../../../shared/api/apiSlice";
+import { apiSlice } from "./apiSlice";
 
 
 export const authAPI = apiSlice.injectEndpoints({

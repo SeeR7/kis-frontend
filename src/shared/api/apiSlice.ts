@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/dist/query/react";
-import { logout, setUser } from "widgets/LoginForm/api/features/authSlice";
+import { logout, setUser } from "shared/api/features/authSlice";
 
 
 //const BASE_URL = 'http://localhost:5000/api';

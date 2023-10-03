@@ -1,6 +1,6 @@
 
 
-const Button = (props: any) => {
+export const Button = (props: any) => {
   return (
     <button
       style={props.style}
@@ -13,5 +13,3 @@ const Button = (props: any) => {
     </button>
   )
 }
-
-export default Button

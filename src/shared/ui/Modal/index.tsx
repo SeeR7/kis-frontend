@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import Button from 'shared/ui/Button'
-import Input from 'shared/ui/Input'
-import Select from 'shared/ui/Select'
+import { Button, Input, Select } from 'shared'
 
-const Modal = ({ title, closeModal, states, columns, handleAction }: any) => {
+
+export const Modal = ({ title, closeModal, states, columns, handleAction }: any) => {
   const [state, setState] = useState(states)
   const [error, setError] = useState("")
 
@@ -61,5 +60,3 @@ const Modal = ({ title, closeModal, states, columns, handleAction }: any) => {
     </div>
   )
 }
-
-export default Modal

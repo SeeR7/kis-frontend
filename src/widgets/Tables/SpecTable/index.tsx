@@ -1,9 +1,9 @@
-import Table from 'entities/Table';
-import SearchBar from 'entities/SearchBar';
+import { SearchBar } from 'shared/ui/search-bar';
+import { Table } from 'entities/Table';
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { Card } from 'shared';
 import { useGetSostavQuery } from 'shared/api/foreignAPI';
-import Card from 'shared/ui/Card';
 
 
 
